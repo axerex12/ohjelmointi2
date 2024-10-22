@@ -1,2 +1,0 @@
-class auto:
-    pass
