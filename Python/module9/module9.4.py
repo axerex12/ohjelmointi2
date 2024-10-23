@@ -20,7 +20,7 @@ class auto:
 
 autot = []
 
-for i in range(10):
+for i in range(1,11):
     rekkari = f"ABC-{i}"
     maxnopeus = random.randint(100, 200)
     auuto = auto(rekkari, maxnopeus)
