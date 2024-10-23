@@ -15,8 +15,9 @@ class TALO:
         hissi.siirry_kerrokseen(kohde)
         print(f"Hissi numero {hnumero} on kerroksessa {hissi.nykykerros}")
 
-
-
+    def palohälytys(self):
+        for i in range(self.hissimäärä):
+            self.aja_hissiä(i,1)
 
 
 class HISSI:
@@ -45,6 +46,7 @@ class HISSI:
 
 talo = TALO(6, 1, 4)
 
-talo.aja_hissiä(4,6)
+talo.aja_hissiä(1,6)
 
+talo.palohälytys()
 
