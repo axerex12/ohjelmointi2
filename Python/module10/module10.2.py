@@ -5,7 +5,7 @@ class TALO:
         self.hissimäärä = hissimäärä
         self.hissit=[]
         i = 0
-        while i != hissimäärä:
+        while i < hissimäärä:
             h = HISSI(alink,ylink)
             self.hissit.append(h)
             i+=1
@@ -14,12 +14,6 @@ class TALO:
         hissi = self.hissit[-1+hnumero]
         hissi.siirry_kerrokseen(kohde)
         print(f"Hissi numero {hnumero} on kerroksessa {hissi.nykykerros}")
-
-    def palo_hälytys(self):
-        for i in range(self.hissimäärä):
-            talo.aja_hissiä(i, 1)
-        for i in self.hissit:
-            print(f"Hissi{i} on kerroksessa {i.nykykerros}")
 
 
 
@@ -52,7 +46,3 @@ class HISSI:
 talo = TALO(6, 1, 4)
 
 talo.aja_hissiä(4,6)
-
-talo.palo_hälytys()
-
-

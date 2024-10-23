@@ -5,7 +5,7 @@ class TALO:
         self.hissimäärä = hissimäärä
         self.hissit=[]
         i = 0
-        while i != hissimäärä:
+        while i < hissimäärä:
             h = HISSI(alink,ylink)
             self.hissit.append(h)
             i+=1
@@ -17,7 +17,7 @@ class TALO:
 
     def palohälytys(self):
         for i in range(self.hissimäärä):
-            self.aja_hissiä(i,1)
+            self.aja_hissiä(i+1,1)
 
 
 class HISSI:
@@ -49,4 +49,3 @@ talo = TALO(6, 1, 4)
 talo.aja_hissiä(1,6)
 
 talo.palohälytys()
-
