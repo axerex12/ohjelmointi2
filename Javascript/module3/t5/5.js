@@ -1,4 +1,5 @@
 'use strict';
+const div = document.querySelector("#pictures")
 const picArray = [
   {
     title: 'Title 1',
@@ -91,5 +92,21 @@ const picArray = [
     },
   },
 ];
+{
+  let p = document.createElement("article")
+  p.classList.add("card")
+for (let i = 0; i < picArray.length; i++) {
+  const { title, caption, description, image } = picArray[i];
 
-// add your code here
+  div.innerHTML += `
+    <article class="card">
+      <h2>${title}</h2>
+      <figure>
+        <img src="${image.medium}" alt="${title}">
+        <figcaption>${caption}</figcaption>
+      </figure>
+      <p>${description}</p>
+    </article>
+  `;
+}
+}
